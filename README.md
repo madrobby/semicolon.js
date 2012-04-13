@@ -13,3 +13,9 @@ Alternatively, inline the whole code, like this:
 ```html
 <script>;</script>
 ```
+
+### Thanks
+
+Thanks to @alloy for pointing out the inherent code security and 
+interoperability problems with Vapor.js; and suggesting to
+leverage the semicolon solution to address the underlying issues.
