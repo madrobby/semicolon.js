@@ -3,7 +3,20 @@
 Semicolon.js is a much more secure, stable and reliable alternative to 
 <a href="http://vaporjs.com/">Vapor.js</a>.
 
-## Usage: 
+## Dependencies
+
+ * Coffee-Script (http://coffeescript.org/)
+   - Why learn JavaScript? Learn coffee-script to compile down to a language you
+     can't debug or optimise. IT'S HIPSTER!
+
+ * NPM (http://npmjs.org/)
+
+## Instalation
+
+  `npm install -g coffee-script`
+  `coffee -c semicolon.coffee --output semicolon.js`
+
+## Usage:
 ```html
 <script src="semicolon.js"></script>
 ```
