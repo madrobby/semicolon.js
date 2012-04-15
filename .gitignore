@@ -1,0 +1,4 @@
+*.o
+.*.sw?
+semiscriptc
+distbuild

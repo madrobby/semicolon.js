@@ -3,6 +3,49 @@
 Semicolon.js is a much more secure, stable and reliable alternative to 
 <a href="http://vaporjs.com/">Vapor.js</a>.
 
+
+## Build:
+
+After much discussion, it became clear that to support this library far into the
+future, we would need to abstract the requirements into its own language, which
+can be compiled down to different languages.
+
+Currently the compiler generates valid code for JavaScript and CoffeeScript, but
+could easily be extended to support additional languages.
+
+The compiler can be build with:
+
+```
+make
+```
+
+It produces the `semiscriptc` tool, which can then be used to compile SemiScript
+source. These source files typically have the `.semi` extension.
+
+JavaScript:
+
+```
+./semiscriptc -js semicolon.semi
+;
+```
+
+CoffeeScript:
+
+```
+./semiscriptc -cs semicolon.semi
+
+```
+
+Beatiful.
+
+Finally, a convenience task is available to produce products for both JavaScript
+_and_ CoffeeScript:
+
+```
+make distbuild
+```
+
+
 ## Usage: 
 ```html
 <script src="semicolon.js"></script>
@@ -19,6 +62,7 @@ Alternatively, inline the whole code, like this:
 Thanks to @alloy for pointing out the inherent code security and 
 interoperability problems with Vapor.js; and suggesting to
 leverage the semicolon solution to address the underlying issues.
+
 
 ### License
 
