@@ -18,7 +18,7 @@
 int main (int argc, char *argv[])
 {
   if (argc != 3) {
-    printf("Usage: %s [-ada|-algol|-c|-cpp|-cs|-java|-js|-pascal|-perl|-php|-ruby] FILE\n", argv[0]);
+    fprintf(stderr, "Usage: %s [-ada|-algol|-c|-cpp|-cs|-java|-js|-pascal|-perl|-php|-ruby] FILE\n", argv[0]);
     return 1;
   }
 
@@ -29,14 +29,13 @@ int main (int argc, char *argv[])
 
   char *source_file = argv[2];
 
+  int row = 0, column = 0;
+  unsigned char comment = 0;
+
   FILE *file = fopen(source_file, "r");
   if (file != NULL) {
-    unsigned char comment = 0;
-    while (1) {
-      char c = fgetc(file);
-      if (c == EOF) {
-        break;
-      }
+    char c;
+    while ((c = fgetc(file)) != EOF) {
       switch (c) {
         // This is where the language translation magic happens.
         case ';':
@@ -48,6 +47,7 @@ int main (int argc, char *argv[])
               // Without semicolon translation.
             }
           }
+          column++;
           break;
 
         // Pass-through new-lines, unless in a comment.
@@ -56,17 +56,25 @@ int main (int argc, char *argv[])
             putc('\n', stdout);
           }
           comment = 0;
+          row++;
+          column = 0;
           break;
 
         // Comment, ignore the rest of the line.
         case '#':
           comment = 1;
           break;
+
+        default:
+          if (!comment) {
+            fprintf(stderr, "Syntax error at row `%d' column `%d'.\n", row, column);
+            return 1;
+          }
       }
     }
     fclose(file);
   } else {
-    printf("Unable to read semiscript source file `%s'.\n", source_file);
+    fprintf(stderr, "Unable to read semiscript source file `%s'.\n", source_file);
     return 1;
   }
 
