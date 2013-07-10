@@ -14,6 +14,11 @@ Alternatively, inline the whole code, like this:
 <script>;</script>
 ```
 
+## Quotes
+
+> Don't forget the semicolon
+> -- <cite>Douglas Crockford, YUIConf 2012</cite>
+
 ### Thanks
 
 Thanks to @alloy for pointing out the inherent code security and 
