@@ -3,6 +3,8 @@
 Semicolon.js is a much more secure, stable and reliable alternative to 
 <a href="http://vaporjs.com/">Vapor.js</a>.
 
+![Semicolon.js Logo (PNG)](logo.png)
+
 ## Usage: 
 ```html
 <script src="semicolon.js"></script>
