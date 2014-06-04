@@ -3,7 +3,7 @@
 Semicolon.js is a much more secure, stable and reliable alternative to 
 <a href="http://vaporjs.com/">Vapor.js</a>.
 
-## Usage: 
+## Usage
 ```html
 <script src="semicolon.js"></script>
 ```
@@ -14,6 +14,10 @@ Alternatively, inline the whole code, like this:
 <script>;</script>
 ```
 
+Here's a diagram of how the stableness and securityness is achieved:
+
+![happland](https://cloud.githubusercontent.com/assets/3390/3179802/201120b2-ec2a-11e3-8d9d-ec3ea23ec07e.jpg)
+
 ### Thanks
 
 Thanks to @alloy for pointing out the inherent code security and 
@@ -22,7 +26,7 @@ leverage the semicolon solution to address the underlying issues.
 
 ### License
 
-(c) Copyright 2012 Thomas Fuchs
+(c) Copyright 2012-2014 Thomas Fuchs
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
