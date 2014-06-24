@@ -5,7 +5,7 @@ Semicolon.js is a much more secure, stable and reliable alternative to
 
 ## Usage
 ```html
-<script src="semicolon.js"></script>
+<script src=";.js"></script>
 ```
 
 Alternatively, inline the whole code, like this:
