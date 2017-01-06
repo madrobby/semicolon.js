@@ -11,7 +11,7 @@ Semicolon.js is a much more secure, stable and reliable alternative to
 Alternatively, inline the whole code, like this:
 
 ```html
-<script>;</script>
+<script>;;;</script>
 ```
 
 Here's a diagram of how the stableness and securityness is achieved:
